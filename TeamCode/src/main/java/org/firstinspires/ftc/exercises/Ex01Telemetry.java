@@ -4,7 +4,16 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
-@TeleOp(name="Exercise 01: Telemetry", group="Exercises")
+/*
+    Task:
+    - Log the amount of elapsed time (seconds) to telemetry
+
+    See:
+    - https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/util/ElapsedTime.html
+    - https://ftctechnh.github.io/ftc_app/doc/javadoc/org/firstinspires/ftc/robotcore/external/Telemetry.html
+*/
+
+@TeleOp(name = "Exercise 01: Telemetry", group = "Exercises")
 public class Ex01Telemetry extends LinearOpMode {
     private final ElapsedTime elapsedTime = new ElapsedTime();
 
@@ -20,14 +29,11 @@ public class Ex01Telemetry extends LinearOpMode {
         // run until the end of the match (driver presses STOP)
         while (opModeIsActive()) {
             // BEGIN EDITING CODE
-            // See https://ftctechnh.github.io/ftc_app/doc/javadoc/com/qualcomm/robotcore/util/ElapsedTime.html
-            // See ElapsedTime#seconds
 
-            String elapsedTimeSeconds = "-1 seconds";
+            String elapsedTimeSeconds = "";
 
             // END EDITING CODE
 
-            telemetry.addData("Elapsed Time", elapsedTimeSeconds);
             telemetry.update();
         }
     }
